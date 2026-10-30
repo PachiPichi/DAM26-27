@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linea_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0909" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linea_equipo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3636" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linea_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4545" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linea_equipo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7273" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linea_faltas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8182" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linea_contador_faltas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9091" />
+
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/triangulo"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linea_top" />
+
+    <TextView
+        android:id="@+id/temporizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_10_00"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linea_top" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linea_top" />
+
+
+
+    <Button
+        android:id="@+id/equipo1_plus1"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/_1plus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linea_top" />
+
+    <Button
+        android:id="@+id/equipo1_plus2"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/_2plus"
+        app:layout_constraintStart_toStartOf="@id/equipo1_plus1"
+        app:layout_constraintTop_toBottomOf="@id/equipo1_plus1" />
+
+    <Button
+        android:id="@+id/equipo1_plus3"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/_3plus"
+        app:layout_constraintStart_toStartOf="@id/equipo1_plus2"
+        app:layout_constraintTop_toBottomOf="@id/equipo1_plus2" />
+
+    <TextView
+        android:id="@+id/equipo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equipo_1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linea_top"
+        app:layout_constraintBottom_toBottomOf="@id/linea_equipo1" />
+
+    <TextView
+        android:id="@+id/marcador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_34"
+        android:textColor="#0F0"
+        android:textSize="80sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/equipo1"
+        app:layout_constraintBottom_toBottomOf="@id/linea_equipo1" />
+
+
+
+    <TextView
+        android:id="@+id/x_central"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/x"
+        android:textColor="#FFF"
+        android:textSize="40sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linea_equipo1"
+        app:layout_constraintBottom_toBottomOf="@id/linea_x" />
+
+
+    <Button
+        android:id="@+id/equipo2_plus1"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/_1plus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linea_x" />
+
+    <Button
+        android:id="@+id/equipo2_plus2"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/_2plus"
+        app:layout_constraintStart_toStartOf="@id/equipo2_plus1"
+        app:layout_constraintTop_toBottomOf="@id/equipo2_plus1" />
+
+    <Button
+        android:id="@+id/equipo2_plus3"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="@string/_3plus"
+        app:layout_constraintStart_toStartOf="@id/equipo2_plus2"
+        app:layout_constraintTop_toBottomOf="@id/equipo2_plus2" />
+
+    <TextView
+        android:id="@+id/equipo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equipo_2"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linea_x"
+        app:layout_constraintBottom_toBottomOf="@id/linea_equipo2" />
+
+    <TextView
+        android:id="@+id/marcador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_18"
+        android:textColor="#0F0"
+        android:textSize="80sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/equipo2"
+        app:layout_constraintBottom_toBottomOf="@id/linea_equipo2" />
+
+
+    <TextView
+        android:id="@+id/faltas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faltas"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linea_equipo2"
+        app:layout_constraintBottom_toBottomOf="@id/linea_faltas" />
+
+
+    <Button
+        android:id="@+id/faltas_plus1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/plus"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toStartOf="@id/faltas_0_izquierda"
+        app:layout_constraintTop_toTopOf="@id/linea_faltas"
+        app:layout_constraintBottom_toBottomOf="@id/linea_contador_faltas" />
+
+    <TextView
+        android:id="@+id/faltas_0_izquierda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor="#FFFF00"
+        android:textSize="40sp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toStartOf="@id/faltas_x"
+        app:layout_constraintTop_toTopOf="@id/linea_faltas"
+        app:layout_constraintBottom_toBottomOf="@id/linea_contador_faltas" />
+
+    <TextView
+        android:id="@+id/faltas_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/x"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linea_faltas"
+        app:layout_constraintBottom_toBottomOf="@id/linea_contador_faltas" />
+
+    <TextView
+        android:id="@+id/faltas_0_derecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor="#FFFF00"
+        android:textSize="40sp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toEndOf="@id/faltas_x"
+        app:layout_constraintTop_toTopOf="@id/linea_faltas"
+        app:layout_constraintBottom_toBottomOf="@id/linea_contador_faltas" />
+
+    <Button
+        android:id="@+id/faltas_plus2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/plus"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toEndOf="@id/faltas_0_derecha"
+        app:layout_constraintTop_toTopOf="@id/linea_faltas"
+        app:layout_constraintBottom_toBottomOf="@id/linea_contador_faltas" />
+
+
+    <Button
+        android:id="@+id/editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editar"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toStartOf="@id/compartir"
+        app:layout_constraintTop_toTopOf="@id/linea_contador_faltas"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/compartir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/compartir"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/editar"
+        app:layout_constraintTop_toTopOf="@id/linea_contador_faltas"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8FF"
+    android:padding="12dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guia_superior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guia_inferior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Examen de Android"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/guia_superior"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/seccion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Datos del Alumno"
+            android:textColor="#0086A8"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/titulo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:hint="Nombre completo"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@id/titulo"
+            app:layout_constraintStart_toEndOf="@id/seccion1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="14dp" />
+
+        <EditText
+            android:id="@+id/correo"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:hint="Correo electrónico"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@id/nombre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/pts2"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:text="Pts"
+            android:textSize="10sp"
+            android:textColor="#777777"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/seccion2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/seccion2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2. Selecciona la respuesta correcta"
+            android:textColor="#0086A8"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/correo"
+            app:layout_constraintStart_toEndOf="@id/pts2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="26dp" />
+
+        <TextView
+            android:id="@+id/pregunta2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="¿Qué componente se utiliza para crear diseños flexibles?"
+            android:textSize="10sp"
+            android:textColor="#333333"
+            app:layout_constraintTop_toBottomOf="@id/seccion2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/radio1"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:text="LinearLayout"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/seccion2"
+            app:layout_constraintStart_toEndOf="@id/pregunta2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:text="ConstraintLayout"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/radio1"
+            app:layout_constraintStart_toEndOf="@id/pregunta2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:text="FrameLayout"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/radio2"
+            app:layout_constraintStart_toEndOf="@id/pregunta2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/pts3"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:text="Pts"
+            android:textSize="10sp"
+            android:textColor="#777777"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/seccion3"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/seccion3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="3. Selecciona todas las que apliquen"
+            android:textColor="#0086A8"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/radio3"
+            app:layout_constraintStart_toEndOf="@id/pts3"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/pregunta3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="¿Cuáles son componentes de la arquitectura Android?"
+            android:textSize="10sp"
+            android:textColor="#333333"
+            app:layout_constraintTop_toBottomOf="@id/seccion3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Activity"
+            android:textSize="10sp"
+            android:padding="0dp"
+            app:layout_constraintTop_toBottomOf="@id/pregunta3"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="2dp" />
+
+        <CheckBox
+            android:id="@+id/checkViewModel"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="ViewModel"
+            android:textSize="10sp"
+            android:padding="0dp"
+            app:layout_constraintTop_toBottomOf="@id/pregunta3"
+            app:layout_constraintStart_toEndOf="@id/checkActivity"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp" />
+
+        <CheckBox
+            android:id="@+id/checkJavaScript"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="JavaScript"
+            android:textSize="10sp"
+            android:padding="0dp"
+            app:layout_constraintTop_toBottomOf="@id/pregunta3"
+            app:layout_constraintStart_toEndOf="@id/checkViewModel"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp" />
+
+        <CheckBox
+            android:id="@+id/checkRepositorio"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Repositorio"
+            android:textSize="10sp"
+            android:padding="0dp"
+            app:layout_constraintTop_toBottomOf="@id/pregunta3"
+            app:layout_constraintStart_toEndOf="@id/checkJavaScript"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/pts4"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:text="Pts"
+            android:textSize="10sp"
+            android:textColor="#777777"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@id/seccion4"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/seccion4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="4. Pregunta de desarrollo"
+            android:textColor="#0086A8"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:gravity="end"
+            app:layout_constraintTop_toBottomOf="@id/checkActivity"
+            app:layout_constraintStart_toEndOf="@id/pts4"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="14dp" />
+
+        <EditText
+            android:id="@+id/respuesta"
+            android:layout_width="0dp"
+            android:layout_height="84dp"
+            android:hint="Explica qué es Dependency Injection"
+            android:textSize="12sp"
+            android:gravity="top|start"
+            android:padding="10dp"
+            android:inputType="textMultiLine"
+            app:layout_constraintTop_toBottomOf="@id/seccion4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/enviar"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:text="Enviar Examen"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#08C4C7"
+            app:layout_constraintTop_toBottomOf="@id/respuesta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guia_inferior"
+            android:layout_marginTop="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
