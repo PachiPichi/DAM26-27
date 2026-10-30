@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linea_superior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linea_inferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centro_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1111" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centro_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4444" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centro_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5556" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centro_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8889" />
+
+
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="▶"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linea_superior" />
+
+    <TextView
+        android:id="@+id/temporizador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/primer_cuarto"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linea_superior" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.º"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/primer_cuarto"
+        app:layout_constraintEnd_toStartOf="@id/btn_editar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linea_superior" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/primer_cuarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <Button
+        android:id="@+id/btn_editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDITAR"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linea_superior" />
+
+
+
+    <Button
+        android:id="@+id/equipo1_plus1"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="+1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/centro_1"
+        app:layout_constraintTop_toTopOf="@id/linea_superior" />
+
+    <Button
+        android:id="@+id/equipo1_plus2"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="+2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/centro_1"
+        app:layout_constraintTop_toBottomOf="@id/equipo1_plus1" />
+
+    <Button
+        android:id="@+id/equipo1_plus3"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="+3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/centro_1"
+        app:layout_constraintTop_toBottomOf="@id/equipo1_plus2" />
+
+
+
+    <TextView
+        android:id="@+id/equipo1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Equipo 1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/centro_1"
+        app:layout_constraintEnd_toEndOf="@id/centro_2"
+        app:layout_constraintTop_toTopOf="@id/linea_superior" />
+
+    <TextView
+        android:id="@+id/marcador1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="34"
+        android:textColor="#0F0"
+        android:textSize="80sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/centro_1"
+        app:layout_constraintEnd_toEndOf="@id/centro_2"
+        app:layout_constraintTop_toBottomOf="@id/equipo1"
+        app:layout_constraintBottom_toBottomOf="@id/linea_inferior" />
+
+
+    <TextView
+        android:id="@+id/x_central"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="X"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@id/centro_2"
+        app:layout_constraintEnd_toEndOf="@id/centro_3"
+        app:layout_constraintTop_toTopOf="@id/linea_superior"
+        app:layout_constraintBottom_toTopOf="@id/faltas_centro" />
+
+    <TextView
+        android:id="@+id/faltas_centro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Faltas"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/centro_2"
+        app:layout_constraintEnd_toEndOf="@id/centro_3"
+        app:layout_constraintTop_toBottomOf="@id/x_central"
+        app:layout_constraintBottom_toBottomOf="@id/linea_inferior" />
+
+
+    <TextView
+        android:id="@+id/equipo2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Equipo 2"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/centro_3"
+        app:layout_constraintEnd_toEndOf="@id/centro_4"
+        app:layout_constraintTop_toTopOf="@id/linea_superior" />
+
+    <TextView
+        android:id="@+id/marcador2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:textColor="#0F0"
+        android:textSize="80sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/centro_3"
+        app:layout_constraintEnd_toEndOf="@id/centro_4"
+        app:layout_constraintTop_toBottomOf="@id/equipo2"
+        app:layout_constraintBottom_toBottomOf="@id/linea_inferior" />
+
+
+    <Button
+        android:id="@+id/equipo2_plus1"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="+1"
+        app:layout_constraintStart_toStartOf="@id/centro_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/linea_superior" />
+
+    <Button
+        android:id="@+id/equipo2_plus2"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="+2"
+        app:layout_constraintStart_toStartOf="@id/centro_4"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@id/equipo2_plus1" />
+
+    <Button
+        android:id="@+id/equipo2_plus3"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:text="+3"
+        app:layout_constraintStart_toStartOf="@id/centro_4"
+        app:layout_constraintTop_toBottomOf="@id/equipo2_plus2" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/inferior_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2222" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/inferior_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/inferior_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4444" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/inferior_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5556" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/inferior_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6667" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/inferior_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7778" />
+
+
+    <Button
+        android:id="@+id/compartir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="COMPARTIR"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/inferior_1"
+        app:layout_constraintTop_toTopOf="@id/linea_inferior"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/faltas_plus_izquierda"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="@id/inferior_1"
+        app:layout_constraintEnd_toEndOf="@id/inferior_2"
+        app:layout_constraintTop_toTopOf="@id/linea_inferior"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/faltas_0_izquierda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#FFFF00"
+        android:textSize="40sp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/inferior_2"
+        app:layout_constraintEnd_toEndOf="@id/inferior_3"
+        app:layout_constraintTop_toTopOf="@id/linea_inferior"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/faltas_x"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/inferior_3"
+        app:layout_constraintEnd_toEndOf="@id/inferior_4"
+        app:layout_constraintTop_toTopOf="@id/linea_inferior"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/faltas_0_derecha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#FFFF00"
+        android:textSize="40sp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/inferior_4"
+        app:layout_constraintEnd_toEndOf="@id/inferior_5"
+        app:layout_constraintTop_toTopOf="@id/linea_inferior"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/faltas_plus_derecha"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/inferior_5"
+        app:layout_constraintEnd_toEndOf="@id/inferior_6"
+        app:layout_constraintTop_toTopOf="@id/linea_inferior"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
